@@ -1,1 +1,1 @@
-# simpleCalc
+This project is about creating a simple GUI calculator. 
