@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.calcBody, .calcDisplay, button {
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+.calcBody {
+    height: 560px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: gray;
+}
+
+.calcDisplay {
+    box-sizing: border-box;
+    padding-right: 20px;
+    height: 120px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.lastOp {
+    font-size: 24px;
+}
+
+.currentOpAndResult {
+    font-size: 36px;
+}
+
+.btnContainer {
+    height: 380px;
+    width: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+button  {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 68px;
+    width: 87.5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.clear, .delete {
+    width: 185px;
+    background-color: #FF7276;
+}
+
+.clear:hover, .delete:hover {
+    background-color: #ff5252;
+}
+
+.clear:active, .delete:active {
+    background-color: #ff0000;
+}
+
+.arithmetic {
+    background-color: #FFD580;
+}
+
+.arithmetic:hover {
+    background-color: orange;
+}
+
+.arithmetic:active {
+    background-color: darkorange;
+}
+
+.equals {
+    background-color: lightblue;
+}
+
+.equals:hover {
+    background-color: #4e91fd;
+}
+
+.equals:active {
+    background-color: #2c2cff;
+}
