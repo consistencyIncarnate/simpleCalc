@@ -2,6 +2,11 @@ let firstNumber = null;
 let secondNumber = null;
 let operator = null;
 
+const displayCurrentAndRes = document.querySelector(".currentOpAndResult");
+const inputBtns = document.querySelectorAll(".btn");
+const dotDecimal = document.querySelector(".dot");
+const operators = document.querySelectorAll(".arithmetic");
+
 function addition(firstNum, secondNum) {
     return firstNum + secondNum;
 };
@@ -34,3 +39,31 @@ function operate(num1, num2, operator) {
         break;
     }
 };
+
+inputBtns.forEach((n) => {
+    n.onclick = (e) => {
+        if(displayCurrentAndRes.textContent === "0" && e.currentTarget.textContent !== "0" ||
+           displayCurrentAndRes.textContent === " 0" && e.currentTarget.textContent !== "0") {
+            displayCurrentAndRes.textContent = e.currentTarget.textContent;
+        } else if(displayCurrentAndRes.textContent === "0" && e.currentTarget.textContent === "0" ||
+            displayCurrentAndRes.textContent === " 0" && e.currentTarget.textContent === "0") {
+                displayCurrentAndRes.textContent = " 0";
+            } else {
+                displayCurrentAndRes.textContent += e.currentTarget.textContent;
+        };
+    };    
+});
+// One dot limit
+dotDecimal.onclick = (e) => {
+    if(!displayCurrentAndRes.textContent.includes(".")) {
+        displayCurrentAndRes.textContent += e.currentTarget.textContent;
+    } else {
+        displayCurrentAndRes.textContent = displayCurrentAndRes.textContent;
+    }
+};
+
+operators.forEach((n) => {
+    n.onclick = (e) => {
+        
+    };
+});
