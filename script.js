@@ -11,6 +11,7 @@ const dotDecimal = document.querySelector(".dot");
 const operators = document.querySelectorAll(".arithmetic");
 const eqls = document.querySelector(".equals");
 const reset = document.querySelector(".clear");
+const delLast = document.querySelector(".delete");
 
 function addition(firstNum, secondNum) {
     return firstNum + secondNum;
@@ -175,4 +176,12 @@ eqls.onclick = (e) => {
 
 reset.onclick = () => {
     clear();
+};
+
+delLast.onclick = () => {
+    if(displayCurrentAndRes.textContent === "0") {
+
+    } else {
+        displayCurrentAndRes.textContent = displayCurrentAndRes.textContent.substring(0, displayCurrentAndRes.textContent.length - 1);
+    }
 };
