@@ -18,7 +18,7 @@ body {
 }
 
 .calcBody {
-    height: 560px;
+    min-height: 520px;
     width: 420px;
     display: flex;
     flex-direction: column;
@@ -26,26 +26,34 @@ body {
     align-items: center;
     gap: 20px;
     background-color: gray;
+    padding: 20px 0;
 }
 
 .calcDisplay {
     box-sizing: border-box;
     padding-right: 20px;
-    height: 120px;
+    min-height: 120px;
     width: 380px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-around;
     background-color: white;
+    overflow: hidden;
 }
 
 .lastOp {
     font-size: 24px;
+    word-break: break-all;
+    width: 100%;
+    text-align: right;
 }
 
 .currentOpAndResult {
     font-size: 36px;
+    word-break: break-all;
+    width: 100%;
+    text-align: right;
 }
 
 .btnContainer {
