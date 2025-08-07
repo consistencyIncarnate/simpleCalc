@@ -13,20 +13,28 @@ const eqls = document.querySelector(".equals");
 const reset = document.querySelector(".clear");
 const delLast = document.querySelector(".delete");
 
+function roundResult(num) {
+    return Math.round(num * 1000) / 1000
+};
+
 function addition(firstNum, secondNum) {
-    return firstNum + secondNum;
+    let sum = firstNum + secondNum;
+    return roundResult(sum);
 };
 
 function subtraction(firstNum, secondNum) {
-    return firstNum - secondNum;
+    let sum = firstNum - secondNum;
+    return roundResult(sum);
 };
 
 function multiplication(firstNum, secondNum) {
-    return firstNum * secondNum;
+    let sum = firstNum * secondNum;
+    return roundResult(sum);
 };
 
 function division(firstNum, secondNum) {
-    return firstNum / secondNum;
+    let sum = firstNum / secondNum;
+    return roundResult(sum);
 };
 
 function operate(num1, num2, operator) {
@@ -41,7 +49,13 @@ function operate(num1, num2, operator) {
             return result = multiplication(num1, num2);
         break;
         case "/":
-            return result = division(num1, num2);
+            if(num1 === 0 || num2 === 0) {
+                alert("Error: You are not able to divide by 0, mortal!");
+                clear();
+                return displayCurrentAndRes.textContent = "0";
+            } else {
+                return result = division(num1, num2);
+            }
         break;
     }
 };
